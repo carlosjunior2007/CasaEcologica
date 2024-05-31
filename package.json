@@ -1,5 +1,4 @@
 {
-  "homepage": "https://carlosjunior2007.github.io/Casa_ecologica",
   "name": "casa-ecologica",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/carlosjunior2007/Casa_ecologica.git"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
