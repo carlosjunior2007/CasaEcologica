@@ -66,7 +66,7 @@ function Navbar() {
 
   return (
     <nav className="navegacion">
-      <Link to="/" className="navbar-logo">
+      <Link to="/CasaEcologica" className="navbar-logo">
         <div className="logo">
           <div className="plant_ico">
             <img src={planta} alt="" />
