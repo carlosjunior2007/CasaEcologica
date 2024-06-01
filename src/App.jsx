@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/CasaEcologica" element={<Home />} />
-        <Route path="/historia" element={<Historia />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/contact" element={<Ayuda />} />
+        <Route path="/CasaEcologica" element={<Home/>} />
+        <Route path="/CasaEcologica/historia" element={<Historia />} />
+        <Route path="/CasaEcologica/quiz" element={<Quiz />} />
+        <Route path="/CasaEcologica/contact" element={<Ayuda />} />
       </Routes>
     </>
   );
