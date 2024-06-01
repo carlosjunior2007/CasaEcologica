@@ -27,46 +27,46 @@ function Navbar() {
 
   function changeBandera() {
     const value = Cookies.get("idioma");
+    let newIdioma = "";
     if (value) {
       if (value === "ES") {
         Cookies.set("idioma", "EN", { expires: 24 });
-        window.location.reload();
-        setIdioma(value);
+        newIdioma = "EN";
       } else if (value === "EN") {
         Cookies.set("idioma", "DE", { expires: 24 });
-        window.location.reload();
-        setIdioma(value);
+        newIdioma = "DE";
       } else if (value === "DE") {
         Cookies.set("idioma", "ES", { expires: 24 });
-        window.location.reload();
-        setIdioma(value);
-      }else{
+        newIdioma = "ES";
+      } else {
         Cookies.set("idioma", "ES", { expires: 24 });
-        window.location.reload();
-        setIdioma(value);
+        newIdioma = "ES";
       }
     } else {
       Cookies.set("idioma", "ES", { expires: 24 });
-      window.location.reload();
+      newIdioma = "ES";
     }
+    setIdioma(newIdioma);
+    window.location.reload();
   }
 
   function renderBandera(){
     const value = Cookies.get("idioma");
     if (value === "ES") {
-      return <img src={estadoUnidos} alt="" /> 
+      return <img src={estadoUnidos} alt="" />
     } else if (value === "EN") {
       return  <img src={aleman} alt="" />
     } else if (value === "DE") {
-      return <img src={mexico} alt="" />
-    }else{
+      return <img src={mexico} alt="" /> 
+      
+    } else {
       return <img src={mexico} alt="" />
     }
   }
 
   return (
     <nav className="navegacion">
-      <Link to="/CasaEcologica" className="navbar-logo">
+      <Link to="/CasaEcologica/" className="navbar-logo">
         <div className="logo">
           <div className="plant_ico">
             <img src={planta} alt="" />
@@ -80,16 +80,15 @@ function Navbar() {
         <div className="flag" onClick={changeBandera}>
           {renderBandera()}
         </div>
-        <Link to="/historia" className="navbar-link">
+        <Link to="/CasaEcologica/historia" className="navbar-link">
         {cookieValue.quiz ? cookieValue.navegacion.historia : ''}
         </Link>
-        <Link to="/quiz" className="navbar-link">
+        <Link to="/CasaEcologica/quiz" className="navbar-link">
         {cookieValue.quiz ? cookieValue.navegacion.quiz : ''}
         </Link>
-        <Link to="/contact" className="navbar-link">
+        <Link to="/CasaEcologica/contact" className="navbar-link">
         {cookieValue.quiz ? cookieValue.navegacion.Ayuda : ''}
-        </Link>{" "}
-        {/* Corregido */}
+        </Link>
       </div>
     </nav>
   );
