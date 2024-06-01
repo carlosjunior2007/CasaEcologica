@@ -47,7 +47,7 @@ function Navbar() {
       newIdioma = "ES";
     }
     setIdioma(newIdioma);
-    window.location.reload();
+    window.location.href = "/CasaEcologica/";
   }
 
   function renderBandera(){
